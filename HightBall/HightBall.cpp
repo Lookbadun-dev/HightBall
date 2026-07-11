@@ -1,4 +1,4 @@
-﻿#include "func.h"
+#include "func.h"
 
 #define VERSION 1.1
 #define VERSION_BAR true // Показ версии в консоли (по умолчанию true).
@@ -17,7 +17,7 @@ int main() {
 		std::cout << "Программа расчета высоты падающего мяча версии: " << VERSION << std::endl;
 	}
 
-	long double h = hight();	// Запрос ввода высоты от пользователя.
+	long double h = hight();	// Запрос ввода высоты от пользователя. 
 
 	resultCalculation(0, h);	// Расчет высоты мяча через 0 секунд после падения.
 	resultCalculation(1, h);	// Расчет высоты мяча через 1 секунду после падения.
