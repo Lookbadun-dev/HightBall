@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-double hight(void);									// Функция запрашивающая ввод числа.
-void resultCalculation(int16_t t, double hight);	// Функция расчитывающая высоту мяча с момента падения.
+long double hight();									// Функция запрашивающая ввод числа.
+long double calculate(int16_t t, long double hight);	// Функция расчетов.
+void resultCalculation(int16_t t, long double hight);	// Функция расчитывающая высоту мяча с момента падения.
 
 #endif
