@@ -11,16 +11,20 @@ long double hight(void) {
 	return Value;
 }
 
-void resultCalculation(int16_t t, long double hight) {
+long double calculate(int16_t t, long double hight) {
 
 	// Расчет высоты на которой находится мяч после падения с высоты hight через время t, по формуле: [ s = u * t + (a * t^2) / 2 ], где u(начальная скорость) = 0.
-	double h = (constants::g * t * t) / 2;
+	long double h = (constants::g * t * t) / 2;
 
-	if (hight - h > 0) {
-		std::cout << "Через " << t << " секунд, " << "мячик находится на высоте " << hight - h << " метров над землей." << std::endl;
+	return hight - h;
+}
+
+void resultCalculation(int16_t t, long double hight) {
+	if (calculate(t, hight) > 0) {
+		std::cout << "Через " << t << " секунд, " << "мячик находится на высоте " << calculate(t, hight) << " метров над землей." << std::endl;
 	}
-	else if (hight - h < 0){
-		std::cout << "Через " << t << " секунд, " << "мячик находится уже на змеле " << std::endl;
+	else if (calculate(t, hight) < 0){
+		std::cout << "Через " << t << " секунд, " << "мячик уже находится на змеле " << std::endl;
 	}
 
 }
